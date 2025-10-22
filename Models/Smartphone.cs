@@ -7,6 +7,7 @@ namespace DesafioPOO.Models
         private string Modelo { get; set; }
         private string IMEI { get; set; }
         private int Memoria { get; set; }
+        // Nova variável que tem por objetivo armazenar os aplicativos instalados
         public List<string> Aplicativos { get; private set; }
 
         public Smartphone(string numero, string modelo, string imei, int memoria)
@@ -29,7 +30,7 @@ namespace DesafioPOO.Models
         }
 
         public abstract void InstalarAplicativo(string nomeApp);
-
+        // Novo método adicionado com o intuído de remover os aplicativos instalados
         public abstract void DesinstalarAplicativo(string nomeApp);
     }
 }

@@ -5,8 +5,10 @@ namespace DesafioPOO.Models
     {
         public Nokia(string numero, string modelo, string imei, int memoria) : base(numero, modelo, imei, memoria) {}
 
+        // TODO: Sobrescrever o método "InstalarAplicativo"
         public override void InstalarAplicativo(string nomeApp)
         {
+            // Valida se o aplicativo está no formato desejado
             if (nomeApp.EndsWith(".apk"))
             {
                 Console.WriteLine($"\nInstalando o aplicativo {nomeApp} no android");

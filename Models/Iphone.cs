@@ -4,10 +4,12 @@ namespace DesafioPOO.Models
     public class Iphone : Smartphone
     {
         public Iphone(string numero, string modelo, string imei, int memoria) : base(numero, modelo, imei, memoria) { }
-        
+
+        // TODO: Sobrescrever o método "InstalarAplicativo"
         public override void InstalarAplicativo(string nomeApp)
         {
-            if(nomeApp.EndsWith(".ipa"))
+            // Valida se o aplicativo está no formato desejado
+            if (nomeApp.EndsWith(".ipa"))
             {
                 Console.WriteLine($"\nInstalando o aplicativo {nomeApp} no ios");
                 Aplicativos.Add(nomeApp);
